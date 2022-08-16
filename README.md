@@ -10,10 +10,10 @@ A repository that contains resources and useful articles for frontend developers
 
 ## Topics:
 1. [Markdown](#markdown)
-1. [Git (Github)](#git-&-github)
+1. [Git (Github)](#user-content-git--github)
 1. [Terminal](#terminal)
 1. [JS](#js)
-1. [NPM (NodeJS)](npm-&-nodejs)
+1. [NPM (NodeJS)](user-content-npm--nodejs)
 
 
 ## Markdown
