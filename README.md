@@ -47,7 +47,7 @@ A repository that contains resources and useful articles for frontend developers
 
 1. ##### `git rebase <nameOfBranch>`
 ![Git rebase example](https://wac-cdn.atlassian.com/dam/jcr:4e576671-1b7f-43db-afb5-cf8db8df8e4a/01%20What%20is%20git%20rebase.svg?cdnVersion=486)
-> Rebasing is the process of moving or combining a sequence of commits to a new base commit (basicly rewriting history). It's useful alternative to merging because it gives a cleaner repo history which can help us troubleshoot bugs faster.
+> Rebasing is the process of moving or combining a sequence of commits to a new base commit (basically rewriting history). It's useful alternative to merging because it gives a cleaner repo history which can help us troubleshoot bugs faster.
 - **Don't rebase in public branches! The rebase would replace the old commits with new ones and it would look like that part of your project history abruptly vanished.**
 - `git log -3` //to see most recent commits (to be exact, last 3 on this example).
 - [Git Rebase clean explanation!](https://www.youtube.com/watch?v=_UZEXUrj-Ds)
