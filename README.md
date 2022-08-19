@@ -52,7 +52,7 @@ A repository that contains resources and useful articles for frontend developers
 - `git log -3` //to see most recent commits (to be exact, last 3 on this example).
 - [Git Rebase clean explanation!](https://www.youtube.com/watch?v=_UZEXUrj-Ds)
 
-
+-
 
 2. `git merge`
 > In the most frequent use cases, git merge is used to combine two branches. When creating a merge commit Git will attempt to auto magically merge the separate histories for us. If Git encounters a piece of data that is changed in both histories it will be unable to automatically combine them. That's why we should be prepared for merge:
@@ -61,7 +61,7 @@ A repository that contains resources and useful articles for frontend developers
 - Execute `git merge <.>` where <.> is the name of the branch that will be merged into the receiving branch.
 [Git merge example](https://wac-cdn.atlassian.com/dam/jcr:c6db91c1-1343-4d45-8c93-bdba910b9506/02%20Branch-1%20kopiera.png?cdnVersion=486)
 
-
+-
 
 3. `git pull`
  
