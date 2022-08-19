@@ -64,7 +64,7 @@ A repository that contains resources and useful articles for frontend developers
 #
 3. ##### `git pull`
 > Git pull is used to fetch and download content from a remote repo and immediately update the local repo to match that content. The biggest risk that can occur when running git pull is getting changes in a remote file that we have been working in which may cause conflics to arise in certain cases.
-- `git pull <remote>` //fetch the specified remote’s copy of the current branch and immediately merge it into the local copy -> it's equal to:           1. git fetch <remote> + git merge <current branch>
+- `git pull <remote>` //fetch the specified remote’s copy of the current branch and immediately merge it into the local copy -> it's equal to: git fetch <remote> + git merge <current branch>
  
 [Git fetch and git pull](https://www.youtube.com/watch?v=QRydepk8TB0)
  
