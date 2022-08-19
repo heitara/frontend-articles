@@ -59,11 +59,17 @@ A repository that contains resources and useful articles for frontend developers
 - Fetch latest remote commits -> Make sure the receiving branch and the merging branch are up-to-date with the latest remote changes. Execute git fetch to pull the latest remote commits. Once the fetch is completed ensure the main branch has the latest updates by executing git pull.
 - Execute `git merge <.>` where <.> is the name of the branch that will be merged into the receiving branch.
 ![Git merge example](https://wac-cdn.atlassian.com/dam/jcr:c6db91c1-1343-4d45-8c93-bdba910b9506/02%20Branch-1%20kopiera.png?cdnVersion=486)
+[Git merge vs rebase example](https://www.youtube.com/watch?v=dO9BtPDIHJ8)
 
 #
 3. ##### `git pull`
+> Git pull is used to fetch and download content from a remote repo and immediately update the local repo to match that content. The biggest risk that can occur when running git pull is getting changes in a remote file that we have been working in which may cause conflics to arise in certain cases.
+- `git pull <remote>` //fetch the specified remote’s copy of the current branch and immediately merge it into the local copy -> it's equal to:           1. git fetch <remote> + git merge <current branch>
  
- **Other useful commands:**
+[Git fetch and git pull](https://www.youtube.com/watch?v=QRydepk8TB0)
+ 
+#
+**Other useful commands:**
  
 - `git init` //initialize local git repository.
 - `git add <file>` //add file(s) in the staging area.
@@ -74,6 +80,7 @@ A repository that contains resources and useful articles for frontend developers
 - `git rm --cached <file>` //it's going to remove a file.
 - `git branch <name>` //create a branch
   - `git checkout <name>` // to switch to other branch.
+- `git fetch <remote>` //fetch all of the branches from the repository -> downloads commits, files, and refs from a remote repository into our local repo (making sure that updates have occured) 
   
   
   
