@@ -30,9 +30,45 @@ A repository that contains resources and useful articles for frontend developers
 
 ---
 ## Git & Github
-  1. rebase
-  1. merge
-  1. pull
+
+**What's git?**
+
+> Git is Version Control System(VCS) for traking changes in computer files. With git many people can work on the same project without having to be on the same network. 
+> Usualy when we use it there is local repository that we make changes on and then we push it to a remote repository.
+
+**Concept of Git**
+
+- Keeps track of code history.
+- Takes 'snapshots' of our files.
+- We can take a 'snapshot' by making a 'commit'.
+- We can visit our snapshots at any time.
+
+**Imortant commands:**
+
+  1. `git rebase <nameOfBranch>`
+![Git rebase example](https://wac-cdn.atlassian.com/dam/jcr:4e576671-1b7f-43db-afb5-cf8db8df8e4a/01%20What%20is%20git%20rebase.svg?cdnVersion=486)
+> Rebasing is the process of moving or combining a sequence of commits to a new base commit. It's useful alternative to merging because it gives a cleaner repo history which can help us troubleshoot bugs faster.
+- `git log -3` //to see most recent commits (to be exact, last 3 on this example).
+
+[Git Rebase clean explanation!](https://www.youtube.com/watch?v=_UZEXUrj-Ds)
+
+  1. `git merge`
+  1. `git pull`
+ 
+ **Other useful commands:**
+ 
+- `git init` //initialize local git repository.
+- `git add <file>` //add file(s) in the staging area.
+- `git status` // shows what we have in the staging area and also what's ready for commit.
+- `git commit`  //commit changes -> it's going to take everything that's in the staging area and put it in our local repository.
+  - `git commit -m 'Changed index.html'` //it's going to commit a file with message.
+- `git clone` //it's going to copy a remote repository into our current folder.
+- `git rm --cached <file>` //it's going to remove a file.
+- `git branch <name>` //create a branch
+  - `git checkout <name>` // to switch to other branch.
+  
+  
+  
 ---
 ## Terminal 
   1. basic commands like mkdir, cd, echo, cat, ls, grep
