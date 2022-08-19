@@ -59,7 +59,8 @@ A repository that contains resources and useful articles for frontend developers
 - Fetch latest remote commits -> Make sure the receiving branch and the merging branch are up-to-date with the latest remote changes. Execute git fetch to pull the latest remote commits. Once the fetch is completed ensure the main branch has the latest updates by executing git pull.
 - Execute `git merge <.>` where <.> is the name of the branch that will be merged into the receiving branch.
 ![Git merge example](https://wac-cdn.atlassian.com/dam/jcr:c6db91c1-1343-4d45-8c93-bdba910b9506/02%20Branch-1%20kopiera.png?cdnVersion=486)
-[Git merge vs rebase example](https://www.youtube.com/watch?v=dO9BtPDIHJ8)
+
+[Git merge vs git rebase](https://www.youtube.com/watch?v=dO9BtPDIHJ8)
 
 #
 3. ##### `git pull`
