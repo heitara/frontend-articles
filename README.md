@@ -131,24 +131,24 @@ A repository that contains resources and useful articles for frontend developers
 
 ### Edit file:
 - Switching modes:
-  - `i` for insert mode.
-  - `esc` for command mode.
+   - `i` for insert mode.
+   - `esc` for command mode.
 
 - Navigation:
- - `k` for going up.
- - `j` for goimg down.
- - `h` for going left.
- - `l` for going right.
+  - `k` for going up.
+  - `j` for goimg down.
+  - `h` for going left.
+  - `l` for going right.
  
 - Editing in a line:
- - `Shift + i` -> Switch to insert mode and move to the start of the line.
- - `a` -> Switch to insert mode and move to the right.
- - `Shift + a` -> Switch to insert mode and move to the end of the line.
- - `i` -> Switch to insert mode and move to the left.
+  - `Shift + i` -> Switch to insert mode and move to the start of the line.
+  - `a` -> Switch to insert mode and move to the right.
+  - `Shift + a` -> Switch to insert mode and move to the end of the line.
+  - `i` -> Switch to insert mode and move to the left.
  
 - Making changes while in command mode:
- - `x` -> Delete the character that we are currently on.
- - `r` -> Replace the character that we are currently on.
+  - `x` -> Delete the character that we are currently on.
+  - `r` -> Replace the character that we are currently on.
  
 #
 3. ssh
