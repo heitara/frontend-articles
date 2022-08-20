@@ -110,8 +110,10 @@ A repository that contains resources and useful articles for frontend developers
    - Create new file -> `cat > new_file.txt`
    
 - ls [option] [directory] -> The command is used to view the content of a directory. If we want to see the content of other directories, type ls and then the directory’s path.
-   - `ls -R` -> 
-  grep
+   - `ls -R` -> It's going to list all the files in the sub-directories.
+   - `ls -a` -> It's going to show the hidden files
+ 
+ - grep
   
   #
   1. vim - create, edit file
