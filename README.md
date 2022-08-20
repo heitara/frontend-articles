@@ -129,12 +129,12 @@ A repository that contains resources and useful articles for frontend developers
 - create
  
 
-### Edit file:
+##### Edit file:
 - Switching modes:
    - `i` for insert mode.
    - `esc` for command mode.
 
-- Navigation:
+- Navigation in command mode:
   - `k` for going up.
   - `j` for goimg down.
   - `h` for going left.
