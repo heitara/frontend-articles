@@ -109,11 +109,16 @@ A repository that contains resources and useful articles for frontend developers
    - Append text -> `cat >> file.txt`
    - Create new file -> `cat > new_file.txt`
    
-- ls [option] [directory] -> The command is used to view the content of a directory. If we want to see the content of other directories, type ls and then the directory’s path.
+- `ls` [option] [directory] -> The command is used to view the content of a directory. If we want to see the content of other directories, type ls and then the directory’s path.
    - `ls -R` -> It's going to list all the files in the sub-directories.
    - `ls -a` -> It's going to show the hidden files
+   - `ls -al` -> It's going to list the files and directories with detailed information like: permissions, size, owner, etc.
  
- - grep
+- `grep` or Global Regular Expression Print -> The command it's going to search through a file or files for a regular expression(regex) and then print out the lines where that regex was found.
+   - `grep 'orage' grocery_list.txt` //It's going to search for orange in the .txt file -> oranges-yes, Orange Juice-no
+   - `grep -i 'orange' grocery_list.txt` // -i it's going to ignore upper or lower-cased latters -> oranges-yes, Orange Juice-yes
+   - `grep -w 'orange'.... ` // It's going to return only the lines where our regex is a single word -> oranges-no, orange juice-yes
+   - `grep -c .... ` // -c It's going to return how many times our regex was found (stands for count)
   
   #
   1. vim - create, edit file
