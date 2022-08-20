@@ -97,6 +97,7 @@ A repository that contains resources and useful articles for frontend developers
     - `cd ..` //Change to previous directory(parent directory).
     - `cd .` //Change to current directory.
     - `cd ~` //Change to the HOME direcory of the user that's currently logged in.
+    - [How to use cd & ls](https://www.youtube.com/watch?v=5QQoKZamqpU&list=LL&index=2)
     
 - `echo` [option] [string] -> The command is going to display string or variable provided by the user.
     - `echo -e` //Enables interpretation of escape charecters like: \a, \b, \c etc.
@@ -108,11 +109,13 @@ A repository that contains resources and useful articles for frontend developers
    - Append content from one file to another -> `cat file1.txt >> file2.txt`
    - Append text -> `cat >> file.txt`
    - Create new file -> `cat > new_file.txt`
+   - [How to use `cat`](https://www.youtube.com/watch?v=nK4028I3N5U&list=LL&index=3&t=452s)
    
 - `ls` [option] [directory] -> The command is used to view the content of a directory. If we want to see the content of other directories, type ls and then the directory’s path.
    - `ls -R` -> It's going to list all the files in the sub-directories.
    - `ls -a` -> It's going to show the hidden files
    - `ls -al` -> It's going to list the files and directories with detailed information like: permissions, size, owner, etc.
+   - [How to use cd & ls](https://www.youtube.com/watch?v=5QQoKZamqpU&list=LL&index=2)
  
 - `grep` or Global Regular Expression Print -> The command it's going to search through a file or files for a regular expression(regex) and then print out the lines where that regex was found.
    - `grep 'orage' grocery_list.txt` //It's going to search for orange in the .txt file -> oranges-yes, Orange Juice-no
@@ -121,8 +124,15 @@ A repository that contains resources and useful articles for frontend developers
    - `grep -c .... ` // -c It's going to return how many times our regex was found (stands for count)
   
   #
-  1. vim - create, edit file
-  1. ssh
+2. **vim**
+ 
+- create
+ 
+
+- edit file 
+ 
+#
+3. ssh
 ---
 ## JS
   1. Object.* [hint](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/javascript.js)
