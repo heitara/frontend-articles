@@ -92,24 +92,24 @@ A repository that contains resources and useful articles for frontend developers
   - `mkdir` [OPTION]... DIRECTORY... -> The command stands for "Make directory" and allows users to create directories. We can create more than one directory at a time.
     - `mkdir test` // It's going to create a folder with the name test.
     
-  - `cd` -> Changes directories!
+- `cd` -> Changes directories!
     - `cd Movie` //It's going to change to Movie folder.
     - `cd ..` //Change to previous directory(parent directory).
     - `cd .` //Change to current directory.
     - `cd ~` //Change to the HOME direcory of the user that's currently logged in.
     
-  - `echo` [option] [string] -> The command is going to display string or variable provided by the user.
-   - `echo -e` //Enables interpretation of escape charecters like: \a, \b, \c etc.
-   - `echo -n` //It's going to display the content with line numbers.
+- `echo` [option] [string] -> The command is going to display string or variable provided by the user.
+    - `echo -e` //Enables interpretation of escape charecters like: \a, \b, \c etc.
+    - `echo -n` //It's going to display the content with line numbers.
    
-  - `cat` [option] [directory] -> The command can:
+- `cat` [option] [directory] -> The command can:
    - Display content of a file(s) -> `cat test_file.txt` or for multiple files `cat test_file1.txt test_file2.txt`
    - Redirect contents -> `cat file1.txt > file2.txt`
    - Append content from one file to another -> `cat file1.txt >> file2.txt`
    - Append text -> `cat >> file.txt`
    - Create new file -> `cat > new_file.txt`
    
-  - ls [option] [directory] -> The command is used to view the content of a directory. If we want to see the content of other directories, type ls and then the directory’s path.
+- ls [option] [directory] -> The command is used to view the content of a directory. If we want to see the content of other directories, type ls and then the directory’s path.
    - `ls -R` -> 
   grep
   
