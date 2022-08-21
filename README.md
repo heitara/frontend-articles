@@ -123,11 +123,11 @@ A repository that contains resources and useful articles for frontend developers
    - `grep -w 'orange'.... ` // It's going to return only the lines where our regex is a single word -> oranges-no, orange juice-yes
    - `grep -c .... ` // -c It's going to return how many times our regex was found (stands for count)
   
-  #
+#
 2. **vim**
  
-- create
- 
+- Create:
+> To use and create vim file (in VScode) we need: Vim extension and [enabled key-repeating](https://github.com/VSCodeVim/Vim).
 
 ##### Edit file:
 - Switching modes:
@@ -152,6 +152,10 @@ A repository that contains resources and useful articles for frontend developers
  
 #
 3. ssh
+
+
+
+
 ---
 ## JS
   1. Object.* [hint](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/javascript.js)
