@@ -151,11 +151,18 @@ A repository that contains resources and useful articles for frontend developers
   - `r` -> Replace the character that we are currently on.
  
 #
-3. ssh
+3. **ssh**
 
+> SSH (or Secure Shell) is network protocol that allows one computer to secuerly connect to another computer by encrypting our data that is sent to a network. It's commonly implemented using the clinet-server model:
+- One computer is called SSH Clinet and another machine acts as SSH Sever.
+- Then SSH can be set-up by using a pair of keys:
+   - Public key that is stored on the SSH Server and a private key that is stored on the SSH Clinet.
+- Then the SSH Client will make contact with the SSH Server and provides the ID of the key pair to prove it's identity.
+- The SSH servers creates a challenge that is encrypted by the public key and sent to the SSH Client.
+- At last the SSH Client decrypts the callenge with the private key and sends back the original form to the SSH Server.
+- Once the nagotiation is complete, the connection is established.
 
-
-
+ 
 ---
 ## JS
   1. Object.* [hint](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/javascript.js)
