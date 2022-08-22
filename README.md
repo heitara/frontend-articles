@@ -168,6 +168,7 @@ A repository that contains resources and useful articles for frontend developers
  
 1. Object.* [hint](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/javascript.js)
  >The object type repsresents one of JS data types. It's used to store various keyed collections (key-value pairs - options), methods and more complex entities.
+[Object hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
  
 ```js
 const person = {
@@ -198,6 +199,7 @@ const person = {
    - `null` or `undefined` -> It's going to create and return empty string.
    - normal input -> It's going to return an obj. of a type that coresponds to the given value
    - obj. -> If the value is object already, it will return the value.
+[Object constructor hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object)
 
 ```js
 function person(name, age, heigh){
@@ -213,8 +215,14 @@ const myFather = new person('David', 45, 182);
    - In a function, refers to the global object.
    - In a function, in strict mode, `this` is undefined.
    - In events, refers to the element that recived the event.
+[Keyword `this` hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+   
+- **prototype** -> That's the mechanism by which JS object inherit features from one another. The property of an object that points to it's proto. is not called prototype, all browsers use `__proto__`. The standart way to accsess an object's proto. is the `Object.getPrototypeOf()` method
+   - Prototype chain - Every object in JS has a built-in property, which it's called `prototype`. The proto. is itself an object, so the proto. will have it's own proto., making what's called a protoype chain.
+   
+[Prototype hint](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
 
- 
+
 1. Inheritance (class, ES6)
 1. await/async
 1. Promises - how to create a promise, how to separete errors.
