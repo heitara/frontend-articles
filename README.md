@@ -167,8 +167,8 @@ A repository that contains resources and useful articles for frontend developers
 ## JS:
  
 1. Object.* [hint](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/javascript.js)
- >The object type repsresents one of JS data types. It's used to store various keyed collections (key-value pairs - options), methods and more complex entities.
-- [Object hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+ >The object type repsresents one of JS data types. It's used to store various keyed collections (key-value pairs - properties), methods and more complex entities.
+- [Object detailed explanation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
  
 ```js
 const person = {
