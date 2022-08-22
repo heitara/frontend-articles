@@ -171,15 +171,30 @@ A repository that contains resources and useful articles for frontend developers
  
 ```js
 const person = {
-    name: 'John'
+    name: 'John',
+    age: 33
 }
 
 console.log(person.name)
 ```
-> In this example we created an object with one property. That's a key-value pair, name beign the key and 'John' the value.
+> In this example we created an object with one property. That's a key-value pair, name beign the key and 'John' the value. We need to put comma(,) after each key-value pair, method etc. 
  To get the value of the name(property) we need to call `person.name`.
 
-- Object constructor -> The obj. constructor turns the input into an object but it's behavior depends on the input's type:
+- **Object methods** -> When the value is function, the property becomes a mathod. Typically, we use methods to describe the object behaviors:
+
+```js
+const person = {
+    firstName: 'Gorge',
+    lastName: 'Johnson',
+    fullName: function(){
+        return `${firstName} ${lastName}`;
+    }
+};
+```
+> In this example we create a method called `fullName` that combine first and last name.
+
+
+- **Object constructor** -> The obj. constructor turns the input into an object but it's behavior depends on the input's type:
    - `null` or `undefined` -> It's going to create and return empty string.
    - normal input -> It's going to return an obj. of a type that coresponds to the given value
    - obj. -> If the value is object already, it will return the value.
@@ -191,8 +206,13 @@ function person(name, age, heigh){
     this.heigh = heigh;
 }
 
-const myFather = new person('David', 17, 182);
+const myFather = new person('David', 45, 182);
 ```
+- **The keyword `this`** -> This keyword refers to an object but it depends on how `this` is been used:
+   - Alone, `this` refers to the global object(window).
+   - In a function, refers to the global object.
+   - In a function, in strict mode, `this` is undefined.
+   - In events, refers to the element that recived the event.
 
  
 1. Inheritance (class, ES6)
