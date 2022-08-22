@@ -164,13 +164,42 @@ A repository that contains resources and useful articles for frontend developers
 
  
 ---
-## JS
-  1. Object.* [hint](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/javascript.js)
-  1. Inheritance (class, ES6)
-  1. await/async
-  1. Promises - how to create a promise, how to separete errors.
-  1. bind(), call(), apply() [hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
-  1. DOM - basics, events, window, document
+## JS:
+ 
+1. Object.* [hint](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/javascript.js)
+ >The object type repsresents one of JS data types. It's used to store various keyed collections (key-value pairs - options), methods and more complex entities.
+ 
+```js
+const person = {
+    name: 'John'
+}
+
+console.log(person.name)
+```
+> In this example we created an object with one property. That's a key-value pair, name beign the key and 'John' the value.
+ To get the value of the name(property) we need to call `person.name`.
+
+- Object constructor -> The obj. constructor turns the input into an object but it's behavior depends on the input's type:
+   - `null` or `undefined` -> It's going to create and return empty string.
+   - normal input -> It's going to return an obj. of a type that coresponds to the given value
+   - obj. -> If the value is object already, it will return the value.
+
+```js
+function person(name, age, heigh){
+    this.fullName = name;
+    this.age = age;
+    this.heigh = heigh;
+}
+
+const myFather = new person('David', 17, 182);
+```
+
+ 
+1. Inheritance (class, ES6)
+1. await/async
+1. Promises - how to create a promise, how to separete errors.
+1. bind(), call(), apply() [hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+1. DOM - basics, events, window, document
 ---
 ## NPM & NodeJS
   1. how to setup project
