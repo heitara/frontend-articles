@@ -222,7 +222,7 @@ const myFather = new person('David', 45, 182);
    - [Prototype hint](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
 
 #
-1. Inheritance (class, ES6)
+2. Inheritance (class, ES6)
 - **What is a class** -> Classes are a template/'special function' for creating objects. The class syntax has two components - class expressions and class declarations:
    - Class declarations -> To declare a class, we use the `class` keyword with the name of the class:
 ```js
@@ -233,8 +233,7 @@ const myFather = new person('David', 45, 182);
      }
  }
 ```
-  
-   - Class expression -> That's another way to define a class. They can be named or unamed and the name given to a class expression is local to the class's body but it can be accessed with the `name` property:
+  - Class expression -> That's another way to define a class. They can be named or unamed and the name given to a class expression is local to the class's body but it can be accessed with the `name` property:
    ```js
    let User = class {
     constructor(email, password){
@@ -274,11 +273,26 @@ console.log(User.name);
     }
   }
   ```
+- [Classes and Inheritance explained!](https://www.youtube.com/watch?v=RBLIm5LMrmc)
+ 
+#
+3. await/async
+- `async` function -> That's a function declared with the async keyword and the await keyword is premitted within it. Both of those keywords combined enable asynchronous, promise-based behavior to be written, avoiding promise chains.
+ 
+   - `try` and `catch` -> When using async function, the eseays way to deal with errors is with try and catch blocks around the asynchronous code.
+ 
+   - `resolve` and `reject`
+ 
+- `await` -> The await operator is used to wait for a `Promise` and it can be used only inside an `async function`. 
+   - Code after each await expression can be thought of as existing in a `.then` callback
+ > If a promise is passed to an await expression, it waits for the promise to be fulfilled and returns the fulfilled value.
+ If the value is not a promise, it converts the value to a resloved promise and waits for it.
 
-1. await/async
-1. Promises - how to create a promise, how to separete errors.
-1. bind(), call(), apply() [hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
-1. DOM - basics, events, window, document
+ 
+#
+4. Promises - how to create a promise, how to separete errors.
+5. bind(), call(), apply() [hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+6. DOM - basics, events, window, document
 ---
 ## NPM & NodeJS
   1. how to setup project
