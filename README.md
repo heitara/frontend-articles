@@ -221,8 +221,60 @@ const myFather = new person('David', 45, 182);
    - Prototype chain - Every object in JS has a built-in property, which it's called `prototype`. The proto. is itself an object, so the proto. will have it's own proto., making what's called a protoype chain.
    - [Prototype hint](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
 
-
+#
 1. Inheritance (class, ES6)
+- **What is a class** -> Classes are a template/'special function' for creating objects. The class syntax has two components - class expressions and class declarations:
+   - Class declarations -> To declare a class, we use the `class` keyword with the name of the class:
+```js
+     class User {
+     constructor(email, password){
+         this.email = email;
+         this.password = password;
+     }
+ }
+```
+  
+   - Class expression -> That's another way to define a class. They can be named or unamed and the name given to a class expression is local to the class's body but it can be accessed with the `name` property:
+   ```js
+   let User = class {
+    constructor(email, password){
+        this.email = email;
+        this.password = password;
+    }
+};
+
+console.log(User.name);
+   ```
+   
+- `extends` or inheritance -> This keyword is used in class declarations or class expressions to create a class as child of another class. 
+
+   - `Constructor` -> The constructor is a special method for creating and initilizing an object with a class. There can only be one method with the name 'constructor' in a class.
+   
+   - `super` keyword -> This keyword is used to call the constructor of the super class.
+> If there is constructor present in the subclass, it needs to first call `super` before using `this`.
+   
+   ```js
+   class Animal {
+    constructor(name) {
+      this.name = name;
+    }
+  
+    noise() {
+      console.log(`${this.name} makes a noise.`);
+    }
+  }
+  
+  class Dog extends Animal {
+    constructor(name) {
+      super(name); 
+    }
+  
+    speak() {
+      console.log(`${this.name} barks.`);
+    }
+  }
+  ```
+
 1. await/async
 1. Promises - how to create a promise, how to separete errors.
 1. bind(), call(), apply() [hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
