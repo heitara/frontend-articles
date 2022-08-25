@@ -379,7 +379,26 @@ console.log(User.name);
    const boundGetNum = findNum.bind(number);
    boundGetNum(); //  returns 33
 ```
+- `call()` -> The call() method calls the function with a given this value and arguments provided individually. It's almost identical to apply(), except that call() accepts an argument list, while apply() accepts a single array of arguments:
+   - with call -> function.call(this, 'name', 'height')
+   - with apply -> function.apply(this, [name, height])
+ 
+ ```js
+     function rollerCoaster(name, height) {
+     this.name = name;
+     this.height = height;
+   }
 
+   function requirements(name, height) {
+     rollerCoaster.call(this, name, height);
+     this.category = 'adrenaline boost';
+   } 
+
+   console.log(new requirements('Joe', 145).name); //output: 'Joe'
+ ```
+> The call() allows for a function or method belonging to one object to be assigned and called for a different object. Also we can write a method once and then inherit it in another object, without having to rewrite the method for the new object.
+ 
+- `apply()` -> The apply() method calls the specified function with a given `this` value, and arguments provided as an array.
 
 #
 6. DOM - basics, events, window, document
