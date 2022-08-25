@@ -278,19 +278,63 @@ console.log(User.name);
 #
 3. await/async
 - `async` function -> That's a function declared with the async keyword and the await keyword is premitted within it. Both of those keywords combined enable asynchronous, promise-based behavior to be written, avoiding promise chains.
- 
-   - `try` and `catch` -> When using async function, the eseays way to deal with errors is with try and catch blocks around the asynchronous code.
- 
-   - `resolve` and `reject`
- 
+   > If the function return a value, the promise will be resolved with that value, but if the function throws an exeption, the promise will be rejected.
+   ```js
+      async function Greeting(){
+        return 'Hello'
+      }// Promise resolved. Outcome -> 'Hello'
+   ```
+   - async function expression -> It's like normal async func. but saved in a variable:
+   '''js
+         const greeting = async () =>{
+           return 'Hello'
+         }// Promise resolved. Outcome -> 'Hello'
+   '''
+   
 - `await` -> The await operator is used to wait for a `Promise` and it can be used only inside an `async function`. 
    - Code after each await expression can be thought of as existing in a `.then` callback
  > If a promise is passed to an await expression, it waits for the promise to be fulfilled and returns the fulfilled value.
  If the value is not a promise, it converts the value to a resloved promise and waits for it.
+```js
+    async function fakeRequest(){
+      let data = await fakeRequest('/page1')
+      return data;
+    }
+```
 
- 
 #
 4. Promises - how to create a promise, how to separete errors.
+- What is a `Promise` -> That's an object which represents the eventual completion or failur of an asynchronous operation and it's resulting value. A promise can have one of these states:
+   - Pending -> Initial state, neither fulfilled nor rejected.
+   - Fulfilled -> It means that the operation was completed successfully.
+   - Rejected -> It means that the operation failed.
+> A promise is said to be settled if it's either fulfilled or rejected, but not pending.
+
+- `.then()` -> This method retunrs a promise. It takes up to two arguments: callback function for the success and failuer of the promise.
+```js
+    const request = fakeRequest('google.com/coffee');
+    request.then(() =>{
+      //if it works .....
+    }).catch(() =>{
+      //if we get error .....
+    })
+```
+
+- `resolve` and `reject` 
+
+- `try` and `catch` -> When using async function, the easiest way to deal with errors is with try and catch blocks around the asynchronous code.
+```js
+   async function doubleRequest(){
+   try{
+     let data1 = await fakeRequest('/page1');
+     let data2 = await fakeRequest('/page2');
+     return data1 && data2;;
+   }catch(error){
+     return error;
+   }
+ }
+```
+ 
 5. bind(), call(), apply() [hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
 6. DOM - basics, events, window, document
 ---
