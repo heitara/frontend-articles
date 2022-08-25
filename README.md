@@ -309,20 +309,8 @@ console.log(User.name);
    - Fulfilled -> It means that the operation was completed successfully.
    - Rejected -> It means that the operation failed.
 > A promise is said to be settled if it's either fulfilled or rejected, but not pending.
-
-- `.then()` -> This method retunrs a promise. It takes up to two arguments: callback function for the success and failuer of the promise.
-```js
-    const request = fakeRequest('google.com/coffee');
-    request.then(() =>{
-      //if it works .....
-    }).catch(() =>{
-      //if we get error .....
-    })
-```
-
-- `resolve` and `reject` 
-
-- `try` and `catch` -> When using async function, the easiest way to deal with errors is with try and catch blocks around the asynchronous code.
+ 
+ - `try` and `catch` -> When using async function, the easiest way to deal with errors is with try and catch blocks around the asynchronous code.
 ```js
    async function doubleRequest(){
    try{
@@ -334,7 +322,42 @@ console.log(User.name);
    }
  }
 ```
+
+- `.then()` -> This method retunrs a promise. It takes up to two arguments: callback function for the success and failuer of the promise.
+```js
+    const request = fakeRequest('google.com/coffee');
+    request.then(() =>{
+      //if it works .....
+    }).catch(() =>{
+      //if we get error .....
+    })
+```
+
+- `resolve` and `reject` -> These are callback which hold value that is used in cetain situation - when the promise is resolved or rejected.
+ ```js
+     let promise = new Promise(function(resolve, reject) {
+       resolve('Success!');
+
+       reject(new Error('There is error!!'));
+     });
+ ```
  
+- How to handle Promise -> The handler methods: `.then()` & `.catch()`:
+ ```js
+      let promise = new Promise(function(resolve, reject) {
+        resolve('Success!');
+
+        reject(new Error('There is error!!')); // ignored
+      });
+
+      promise.then(() =>{
+        return resolve;
+      }).catch(() =>{
+        return reject;
+      });
+ ```
+
+#
 5. bind(), call(), apply() [hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
 6. DOM - basics, events, window, document
 ---
