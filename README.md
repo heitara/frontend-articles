@@ -359,6 +359,29 @@ console.log(User.name);
 
 #
 5. bind(), call(), apply() [hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+- `bind()` -> That's a method which creates new function that, when called, has it's `this` keyword set to the provided value, with a given sequence of arguments. 
+
+> The bind() function creates a new bound function. Calling the bound function generally results in the execution of its wrapped function. The bound function will store the parameters passed — which include the value of this and the first few arguments.
+```js
+   this.x = 5;   
+   const number = {
+     num: 33,
+     getNum() { return this.num; }
+   };
+
+   module.getNum(); //  returns 33
+
+
+   const findNum = number.getNum;
+   findNum(); //  returns 5 because the function gets invoked at the global scope
+
+
+   const boundGetNum = findNum.bind(number);
+   boundGetNum(); //  returns 33
+```
+
+
+#
 6. DOM - basics, events, window, document
 ---
 ## NPM & NodeJS
