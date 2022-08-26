@@ -379,9 +379,7 @@ console.log(User.name);
    const boundGetNum = findNum.bind(number);
    boundGetNum(); //  returns 33
 ```
-- `call()` -> The call() method calls the function with a given this value and arguments provided individually. It's almost identical to apply(), except that call() accepts an argument list, while apply() accepts a single array of arguments:
-   - with call -> function.call(this, 'name', 'height')
-   - with apply -> function.apply(this, [name, height])
+- `call()` -> The call() method calls the function with a given this value and arguments provided individually. 
  
  ```js
      function rollerCoaster(name, height) {
@@ -398,10 +396,35 @@ console.log(User.name);
  ```
 > The call() allows for a function or method belonging to one object to be assigned and called for a different object. Also we can write a method once and then inherit it in another object, without having to rewrite the method for the new object.
  
-- `apply()` -> The apply() method calls the specified function with a given `this` value, and arguments provided as an array.
+- `apply()` -> The apply() method calls the specified function with a given `this` value, and arguments provided as an array. It's almost identical to call(), except that call() accepts an argument list, while apply() accepts a single array of arguments:
+   - with call -> function.call(this, 'name', 'height')
+   - with apply -> function.apply(this, [name, height])
+```js
+       const person = {
+         fullName: function (city, country) {
+            return `${this.firstName} ${this.lastName} lives in ${city}, ${country}`;
+         },
+       };
+
+   const person1 = {
+     firstName: "Joe",
+     lastName: "Barling",
+   };
+
+   person.fullName.apply(person1, ['London', 'United Kingdom']);
+```
 
 #
 6. DOM - basics, events, window, document
+- DOM (or Document Object Model) -> The DOM connects web pages to scripts or programming languages by reprsenting the structure of a document (it contains representation of all the content on the page). Usually it refers to JS, even though modeling HTML and other documents as objects are not part of the core JS language.
+   - HTML DOM -> A document containing HTML is described using the `document interface`, which is extended by the HTML specification to include various HTML-specific features.
+   
+- DOM elements -> How to find an element:
+   - `document.getElementById('root')` -> by using the element id.
+   - `document.getElementsByTagName('p');` -> by using the element tag name.
+   - `document.getElementByClassName('class_name')` -> by using the element class name.
+   - `document.querySelector('p')` -> by using querySelector, it's going to take the first match (first paragraph). If we want id('#id') or class('.class_name').
+
 ---
 ## NPM & NodeJS
   1. how to setup project
