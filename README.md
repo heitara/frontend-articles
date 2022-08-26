@@ -438,11 +438,20 @@ console.log(User.name);
    - `document.createElement('img')` -> It creates and `empty` element.
    - `.append` -> we can append text or element.
    - `.appendChild` -> This method allows us to add a node to the end of the list of child nodes of a specified parent element.
-   - insertAdjecentElement('position', element) -> It's going to  insert an element to a specifiv position:
+   - `Element.insertAdjecentElement('position', element)` -> It's going to  insert an element to a specifiv position:
       - 'beforebegin' -> before the target element.
       - 'afterend' -> after the target element.
       - 'afterbegin' -> inside the target element, before it's first child.
       - 'beforeend' -> inside the target element, after it's last child.
+- DOM events -> 
+  - `.addEventListener('onclick', function....);` -> we can add what event we are listening for (onclick) and a function that we want to accure after is clicked.
+ ```js
+    const btn = element.querySelector('.btn');
+    const random = () =>{
+      alert('click accured');
+    }
+    btn.addEventListener('onlclick', random);
+ ```
 
 
 ---
