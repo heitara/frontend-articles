@@ -452,6 +452,14 @@ console.log(User.name);
     }
     btn.addEventListener('onlclick', random);
  ```
+- We can add objects after the function to specify different things:
+```js
+    const btn = element.querySelector('.btn');
+    const random = () =>{
+      alert('click accured');
+    }
+    btn.addEventListener('onlclick', random, {once: true});//we add an obejct value that allows the function to run once.
+```
 
 
 ---
