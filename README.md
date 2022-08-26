@@ -424,6 +424,26 @@ console.log(User.name);
    - `document.getElementsByTagName('p');` -> by using the element tag name.
    - `document.getElementByClassName('class_name')` -> by using the element class name.
    - `document.querySelector('p')` -> by using querySelector, it's going to take the first match (first paragraph). If we want id('#id') or class('.class_name').
+- Other useful commands:
+   - `.innerText` -> It changes the text of the element.
+   - `.getAttribute('class')` -> It gives the name of the class of the variable we are using it on.
+   - .style -> It changes the style but inline - `.style.color = 'red'.
+   - `.ClassList` -> It gives the class of the element.
+      - `.ClassList.add(class_name)` -> we can add classes without removing the others (like setAttribute does).
+      - `ClassList.remove('class_name')` -> removes a class.
+      - `ClassList.toggle('class_name')` -> we can toggle a specific class to acitve.
+   - `.parentElement` -> it gives the parent element of the element.
+   - `.children` -> It gives HTML collection of the children.
+   - `document.createElement('img')` -> It creates and `empty` element.
+   - `.append` -> we can append text or element.
+   - `.appendChild` -> This method allows us to add a node to the end of the list of child nodes of a specified parent element.
+   - insertAdjecentElement('position', element) -> It's going to  insert an element to a specifiv position:
+      - 'beforebegin' -> before the target element.
+      - 'afterend' -> after the target element.
+      - 'afterbegin' -> inside the target element, before it's first child.
+      - 'beforeend' -> inside the target element, after it's last child.
+
+
 
 ---
 ## NPM & NodeJS
