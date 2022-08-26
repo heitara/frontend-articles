@@ -427,13 +427,14 @@ console.log(User.name);
 - Other useful commands:
    - `.innerText` -> It changes the text of the element.
    - `.getAttribute('class')` -> It gives the name of the class of the variable we are using it on.
-   - .style -> It changes the style but inline - `.style.color = 'red'.
+   - `.style` -> It changes the style but inline - `.style.color = 'red'`.
    - `.ClassList` -> It gives the class of the element.
       - `.ClassList.add(class_name)` -> we can add classes without removing the others (like setAttribute does).
       - `ClassList.remove('class_name')` -> removes a class.
       - `ClassList.toggle('class_name')` -> we can toggle a specific class to acitve.
    - `.parentElement` -> it gives the parent element of the element.
    - `.children` -> It gives HTML collection of the children.
+   - `.removeChild(child)` -> It's going to remove a child of an element.
    - `document.createElement('img')` -> It creates and `empty` element.
    - `.append` -> we can append text or element.
    - `.appendChild` -> This method allows us to add a node to the end of the list of child nodes of a specified parent element.
@@ -442,7 +443,6 @@ console.log(User.name);
       - 'afterend' -> after the target element.
       - 'afterbegin' -> inside the target element, before it's first child.
       - 'beforeend' -> inside the target element, after it's last child.
-
 
 
 ---
