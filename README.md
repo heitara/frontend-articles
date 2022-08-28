@@ -458,14 +458,30 @@ console.log(User.name);
     const random = () =>{
       alert('click accured');
     }
-    btn.addEventListener('onlclick', random, {once: true});//we add an obejct value that allows the function to run once.
+    btn.addEventListener('onlclick', random, {once: true});
+    //we add an obejct value that allows the function to run once.
 ```
-
 
 ---
 ## NPM & NodeJS
-  1. how to setup project
-  1. how to add scripts
+ 1. What is NPM -> npm is the world's lagerst Software Library and also a sofware Package Manager and Installer. It's the main package manager for node.js .
+- Dependencies -> Packages that are built using other packages (they are using the package that they are built on to work properly).
+2. What is Node.js -> Node.js is open-source, cross-platform JS runtime environment with focus on the networking applications.
+- useful commands:
+    - `node -v` or `npm -v` to see the version that is installed.
+3. How to setup project:
+- installing npm packeges -> There are 2 ways of installing packages - locally and globall: 
+> Generally  we want to install packages locally in the project floder that we want to use the package for (it will be accessable on that specific project folder). To install pcg. we use the npm cli(command line interface) in our terminal - `npm install <package>`
+     Usually we will only globally install packages that are meant to be run on our command line in any directory. To install globally - `npm install -g <package>`
+     
+- `package.json` file -> This file store info about our projects like: the name, version, author, github repo etc. and it's super useful if other people want to clone our project and need all the specific packages that we used.
+> To set-up our own json file we need to run - `npm init`. After npm is done asking question about our file it will create the json file.
+   
+- `node_modules` folder -> There npm stores all the package files that get installed. Also in that folder we can have other folders that are dependencies of the package that we installed.
+- `npm list` -> to display all installed packages and the version they are.
+     
+#
+  4. How to add scripts
 ---
 
 
