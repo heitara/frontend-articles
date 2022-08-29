@@ -101,6 +101,10 @@ A repository that contains resources and useful articles for frontend developers
     
 - `echo` [option] [string] -> The command is going to display string or variable provided by the user.
     - `echo -e` //Enables interpretation of escape charecters like: \a, \b, \c etc.
+       - `\a` -> plays a sound alert when displaying the output.
+       - `\b` -> creates a backspace character.
+       - `\c` -> omits any output following the escape charecter.
+       - `\n` -> adds a new line.
     - `echo -n` //It's going to display the content with line numbers.
    
 - `cat` [option] [directory] -> The command can:
@@ -154,7 +158,7 @@ A repository that contains resources and useful articles for frontend developers
 3. **ssh**
 
 > SSH (or Secure Shell) is network protocol that allows one computer to secuerly connect to another computer by encrypting data. It's commonly implemented using the clinet-server model:
-- One computer is called SSH Clinet and another machine acts as SSH Sever.
+- One computer is called SSH Clinet and another machine acts as SSH Server.
 - Then SSH can be set-up by using a pair of keys:
    - Public key that is stored on the SSH Server and a private key that is stored on the SSH Clinet.
 - Then the SSH Client will make contact with the SSH Server and provide the ID of the key pair to prove it's identity.
@@ -178,10 +182,10 @@ const person = {
 
 console.log(person.name)
 ```
-> In this example we created an object with one property. That's a key-value pair, name beign the key and 'John' the value. We need to put comma(,) after each key-value pair, method etc. 
+> In this example we created an object with two properties. They are both key-value pairs, name(or age) beign the key and 'John'(or 33) the value. We need to put comma(,) after each key-value pair, method etc. 
  To get the value of the name(property) we need to call `person.name`.
 
-- **Object methods** -> When the value is function, the property becomes a mathod. Typically, we use methods to describe the object behaviors:
+- **Object methods** -> When the value is function, the property becomes a method. Typically, we use methods to describe the object behaviors:
 
 ```js
 const person = {
@@ -197,7 +201,7 @@ const person = {
 
 - **Object constructor** -> The obj. constructor turns the input into an object but it's behavior depends on the input's type:
    - `null` or `undefined` -> It's going to create and return empty string.
-   - normal input -> It's going to return an obj. of a type that coresponds to the given value
+   - normal input -> It's going to return an obj. of a type that coresponds to the given value.
    - obj. -> If the value is object already, it will return the value.
    - [Object constructor hint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object)
 
@@ -419,6 +423,8 @@ console.log(User.name);
 - DOM (or Document Object Model) -> The DOM connects web pages to scripts or programming languages by reprsenting the structure of a document (it contains representation of all the content on the page). Usually it refers to JS, even though modeling HTML and other documents as objects are not part of the core JS language.
    - HTML DOM -> A document containing HTML is described using the `document interface`, which is extended by the HTML specification to include various HTML-specific features.
    
+- `The document object` -> Represents the web page and it's used to access elements in the HTML file. 
+ 
 - DOM elements -> How to find an element:
    - `document.getElementById('root')` -> by using the element id.
    - `document.getElementsByTagName('p');` -> by using the element tag name.
@@ -461,6 +467,8 @@ console.log(User.name);
     btn.addEventListener('onlclick', random, {once: true});
     //we add an obejct value that allows the function to run once.
 ```
+
+- `The window object` -> It represents the browser's window and it's supported by all browsers. **All global JS objects, functions and veriables automatically become members of the window object. Global veriables are properties of hte window object and global functions are methods of the window object.**
 
 ---
 ## NPM & NodeJS
