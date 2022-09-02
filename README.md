@@ -29,7 +29,7 @@ A repository that contains resources and useful articles for frontend developers
 [**Markdown cheat sheet**](https://www.markdownguide.org/cheat-sheet/)
 
 ---
-## Git(Github)
+## Git and Github
 
 **What's git?**
 
@@ -491,7 +491,7 @@ console.log(User.name);
 - `The window object` -> It represents the browser's window and it's supported by all browsers. **All global JS objects, functions and veriables automatically become members of the window object. Global veriables are properties of hte window object and global functions are methods of the window object.**
 
 ---
-## NPM & NodeJS
+## NPM and NodeJS
  1. What is NPM -> npm is the world's lagerst Software Library and also a sofware Package Manager and Installer. It's the main package manager for node.js .
 - Dependencies -> Packages that are built using other packages (they are using the package that they are built on to work properly).
 2. What is Node.js -> Node.js is open-source, cross-platform JS runtime environment with focus on the networking applications.
