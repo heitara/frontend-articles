@@ -308,13 +308,33 @@ console.log(User.name);
 
 #
 4. Promises - how to create a promise, how to separete errors.
-- What is a `Promise` -> That's an object which represents the eventual completion or failur of an asynchronous operation and it's resulting value. A promise can have one of these states:
+- What is a `Promise` -> That's an object which represents the eventual completion or failure of an asynchronous operation and it's resulting value. A promise can have one of these states:
    - Pending -> Initial state, neither fulfilled nor rejected.
    - Fulfilled -> It means that the operation was completed successfully.
    - Rejected -> It means that the operation failed.
-> A promise is said to be settled if it's either fulfilled or rejected, but not pending.
+> A promise is said to be settled if it's either fulfilled or rejected, but not pending. To create one we simply need to write `new Promise` .
+
+```js
+   let myPromise = new Promise(function(resolve, reject) {
+       resolve(); // when successful
+       reject();  // when error
+     });
+
+     myPromise
+     .then(
+       function (res){
+         //code that will run if it's successful
+       }
+     )
+     .catch(
+       function(err){
+         //code if there is error
+       }
+     );
+```
  
- - `try` and `catch` -> When using async function, the easiest way to deal with errors is with try and catch blocks around the asynchronous code.
+
+- `try` and `catch` -> When using async function, the easiest way to deal with errors is with try and catch blocks around the asynchronous code.
 ```js
    async function doubleRequest(){
    try{
