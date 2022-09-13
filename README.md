@@ -140,7 +140,7 @@ A repository that contains resources and useful articles for frontend developers
 
 - Navigation in command mode:
   - `k` for going up.
-  - `j` for goimg down.
+  - `j` for going down.
   - `h` for going left.
   - `l` for going right.
  
@@ -289,11 +289,11 @@ console.log(User.name);
       }// Promise resolved. Outcome -> 'Hello'
    ```
    - async function expression -> It's like normal async func. but saved in a variable:
-   '''js
+   ```js
          const greeting = async () =>{
            return 'Hello'
          }// Promise resolved. Outcome -> 'Hello'
-   '''
+   ```
    
 - `await` -> The await operator is used to wait for a `Promise` and it can be used only inside an `async function`. 
    - Code after each await expression can be thought of as existing in a `.then` callback
@@ -425,7 +425,7 @@ console.log(User.name);
    - with apply -> function.apply(this, [name, height])
 ```js
        const person = {
-         fullName: function (city, country) {
+         info: function (city, country) {
             return `${this.firstName} ${this.lastName} lives in ${city}, ${country}`;
          },
        };
@@ -435,7 +435,7 @@ console.log(User.name);
      lastName: "Barling",
    };
 
-   person.fullName.apply(person1, ['London', 'United Kingdom']);
+   person.info.apply(person1, ['London', 'United Kingdom']);
 ```
 
 #
@@ -488,7 +488,7 @@ console.log(User.name);
     //we add an obejct value that allows the function to run once.
 ```
 
-- `The window object` -> It represents the browser's window and it's supported by all browsers. **All global JS objects, functions and veriables automatically become members of the window object. Global veriables are properties of hte window object and global functions are methods of the window object.**
+- `The window object` -> It represents the browser's window and it's supported by all browsers. **All global JS objects, functions and veriables automatically become members of the window object. Global veriables are properties of the window object and global functions are methods of the window object.**
 
 ---
 ## NPM and NodeJS
