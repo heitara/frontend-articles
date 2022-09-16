@@ -13,7 +13,7 @@
   - CSS Shapes from images.
 
 #
-**Vulnerabilities arising from CORS configuration issues:**
+[**Vulnerabilities arising from CORS configuration issues:**](https://portswigger.net/web-security/cors)
 - Websites that are using CORS to `allow access from subdomains and trusted third parties`. Their implementation of CORS may contain mistakes or be overly lenient to ensure that everything works, and this can result in exploitable vulnerabilities.
 - Mistakes often arise when `implementing CORS origin whitelists`. Some organizations decide to allow access from all their subdomains and some applications allow access from various other organizations. These rules are often implemented by matching URL prefixes or suffixes, or using regular expressions. Any mistakes in the implementation can lead to access being granted to unintended external domains.
 - `Exploiting XSS via CORS trust relationships` -> If a website trusts an origin that is vulnerable to cross-site scripting (XSS), then an attacker could exploit the XSS to inject some JavaScript that uses CORS to retrieve sensitive information from the site that trusts the vulnerable application.
