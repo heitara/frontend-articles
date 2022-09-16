@@ -28,3 +28,14 @@
   - When one packet of information does not make it to its destination, it will no longer block all streams of information.
   - Faster connection establishment.
   - More comprehensive encryption (will provied encryption by default).
+  
+#
+3. [HTTPS](https://www.cloudflare.com/en-gb/learning/ssl/what-is-https/)
+  
+  > HTTPS(or Hypertext transfer protocol secure) is the secure version of HTTP which means it's encrypted in order to increase security of data transfer. This is particularly important when users transmit sensitive data, such as by logging into a bank account, email service, or health insurance provider.
+  
+- [How does HTTPS work](https://www.youtube.com/watch?v=hExRDVZHhig):
+  - It uses an encryption protocol to encrypt communications. The protocol is called `Transport Layer Security (TLS)`, although formerly it was known as `Secure Sockets Layer (SSL)`. This protocol secures communications by using what’s known as an asymmetric public key infrastructure. 
+  - This type of security system uses two different keys to encrypt communications between two parties:
+     - The private key which is controlled by the owner of a website.
+     - The public key which is available to everyone who wants to interact with the server in a way that’s secure.
