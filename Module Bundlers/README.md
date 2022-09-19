@@ -41,3 +41,32 @@
   - By setting the mode parameter to either `development`, `production` or `none`, you can enable webpack's built-in optimizations that correspond to each environment(The default value is production).
 - Browser Compatibility
   - Webpack supports all browsers that are ES5-compliant.
+  
+#
+# [Vite](https://www.youtube.com/watch?v=KCrXgy8qtjM)
+
+**Overview:**
+
+- Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects. It consists of two major parts:
+
+1. A dev server that provides feature enchancements over native ES modules with the extremly fast `Hot Module Replacment(HRM)`
+   - Frameworks with HMR capabilities can leverage the API to provide instant, precise updates without reloading the page or blowing away the application state.
+2. A build command that bundles your code with Rollup, pre-configured to output highly optimized static assets for production.
+#
+
+> Vite provides a modern dev environment that can forego the bundling step because it serves the browser native ES modules. It provides templates for a number of frameworks and vanilla JavaScript, and also offers TypeScript, JSX and Sass support.
+
+#
+# Rollup
+
+**Overview:**
+
+> Rollup is a module bundler for JS which comples small pieces of code into something larger and more complex, such as a library or application. It uses the new standardized format for code modules included in the ES6 revision of JS.<br> Rollup can be used either through the CLI with and option configuration file, or through it's JS API.
+
+#
+
+- Benefits of using Rollup:
+  - Development is easier to manage when using smaller, self-contained source files.
+  - The source can be linted, prettified and syntax-checked during the bundling process.
+  - Unused functions are automatically removed using tree-shaking methods which reduce file sizes and improve performance.
+  - The final production bundle can have whitespace and logging removed to minify the file size.
