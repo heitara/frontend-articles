@@ -1,4 +1,4 @@
-# NPM and NodeJS
+# NPM and [NodeJS](https://www.youtube.com/watch?v=ENrzD9HAZK4)
  1. What is NPM -> npm is the world's lagerst Software Library and also a sofware Package Manager and Installer. It's the main package manager for node.js .
 - Dependencies -> Packages that are built using other packages (they are using the package that they are built on to work properly).
 2. What is Node.js -> Node.js is open-source, cross-platform JS runtime environment with focus on the networking applications.
