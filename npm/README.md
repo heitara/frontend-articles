@@ -19,8 +19,8 @@
   - `Sinon.js` -> It's a standalone framework for JS and works with any testing framework. Sinon.js supports stubs, spies and moch and also has cross-platform support.
   - `Express.js` -> It enables the users to build software with JS on the server side. Whole website can be built by using - Node.js to build server-side part of the app and Express.js to publish the app on your website.
   - `Passport` -> It's an authentication middleware. It gives a choise of over 300 different ways of authenticating your app including username and password model.
-  - Socket.io -> That's a framework that enables a bi-directional communication in real time, based on events. It includes real-time analytics with counters and charts.
-  - BlueBird.js -> BlueBird is promise library that helps to control asynchronous code.
+  - `Socket.io` -> That's a framework that enables a bi-directional communication in real time, based on events. It includes real-time analytics with counters and charts.
+  - `BlueBird.js` -> BlueBird is promise library that helps to control asynchronous code.
 
 #
 3. How to setup project:
