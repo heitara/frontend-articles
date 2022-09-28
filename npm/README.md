@@ -8,6 +8,11 @@
 
 - To use a certain package we need to require it first in our file. NPM has tons of packages that we can install and use in our projects. First we search what we need in the [npm website](https://www.npmjs.com/) and there we can find how we can integrade it in our project!
 #
+
+- `What's library` -> When we use libraries we are in charge. We control the flow of the application code and we decide when to use the library!
+- `What's framework` -> Here the framework is in chrage of taking actions and the framework tells us where to plug-in the code!
+
+#
 2. What is [node.js](https://www.youtube.com/watch?v=ENrzD9HAZK4) -> Node.js is open-source, cross-platform JS runtime environment with focus on the networking applications (or the way developers write JS ot the server).
 - The global object is not called `window` like in JS, it's called global!
 
@@ -92,7 +97,54 @@ math.add(3, 7);
 ```
 
 - Node.js tools:
-  - `Express.js` -> It enables the users to build software with JS on the server side. Whole website can be built by using - Node.js to build server-side part of the app and Express.js to publish the app on your website.
+  - `Express.js` -> It's framework for node.js that helps us to build web apps. Also it's NPM package which comes with a bunch of methods and optional plugins that the dev's can use to build web applications and API's (to get servers up and running).
+```js
+const express = require("express");
+const app = express; // It's common to define express under the name app
+
+app.use((req, res) => {
+  //use it's for incoming requests
+  //Anytime we have incoming requrest this callback function will run
+  //In our callback we have access to two parameteres - req(for request), res(for response)
+  res.send('This is your response')
+  //response has method called send which sends back a response
+});
+app.listen(3000, () => {
+  //Express will listen for any activity on localhost:3000
+  //3000 it's a port
+});
+```
+- Express Rounding:
+```js
+app.get("./info", (req, res) => {
+  res.send("This is our info page!");
+});
+
+app.get("/", (req, res) => {
+  //This is the main page!
+});
+app.post("/", (req, res) => {
+  //This is post request
+});
+app.get('*', (req,res)=>{
+    //This symbol means that every single route that we haven's specified will be send response from this function
+})
+```
+- Defining a pattern when using not exact route:
+```js
+app.get("/r/:subreddit", (req, res) => {
+  //When using '/:some_name we are giving a path, and wehn used the response will be always the same'
+});
+```
+- `params` -> express adds a property in the request object which conveniently creates an object:
+```js
+app.get("/r/:subreddit", (req, res) => {
+  const { subreddit } = req.params; //Destructoring the subreddit
+  res.send(`You are in ${subreddit} subreddit!`);
+});
+
+```
+#
   - `Mocha.js` -> That's a JS framework that enables node.js developers to test both in the console and in the browser. It also work for TDD(Test-Driven Development) and BDD(Behaviour Driven Development). Mocha.js modularity is a big advantage because it allows the user to use other libraries.
   - `Chai` -> As an assential tool, chai is mostly used beacause of it's rich plugins(like chai-as-promised, chai-subset, chai-things etc.). Chai is also a TDD and BDD assertion framework.
   - `Sinon.js` -> It's a standalone framework for JS and works with any testing framework. Sinon.js supports stubs, spies and moch and also has cross-platform support.
