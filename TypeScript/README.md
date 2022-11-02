@@ -31,6 +31,12 @@ const user: User = { // We can shape out  new interface by using syntax like : T
   id: 0,
 };
 ```
+- If we dont want to hard code a specific value:
+```js
+interface Person {
+  [key: string]: any;
+}
+```
 - Since JavaScript supports classes and object-oriented programming, so does TypeScript. You can use an interface declaration with classes:
 ```js
 interface User {
@@ -49,6 +55,26 @@ class UserAccount {
 }
  
 const user: User = new UserAccount("Murphy", 24);
+```
+- Usage in functions:
+```js
+function pow(x: number, y: number): number{
+  return Math.pow(x, y);
+}
+
+// If we want to stringify the value(of the exmaple above):
+
+function pow(x: number, y: number): string{
+  return Math.pow(x, y).toString();
+}
+```
+**For functions that doesn't return value(like event listeners) we use `void`!**
+
+- If we want to make hardcoded things optional(we add ? after the type we want to hardcode):
+```js
+function pow(x: number?, y: number?): number?{
+  return Math.pow(x, y);
+}
 ```
 
 # 
