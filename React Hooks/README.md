@@ -2,7 +2,7 @@
 
 **Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don’t work inside classes — they let you use React without classes**
 
-1. State Hook(returns stateful value and a function to update it)
+1. [State Hook](https://www.youtube.com/watch?v=O6P86uwfdR0&t=1s)(returns stateful value and a function to update it)
 - We call it inside a function component to add some local state to it. React will preserve this state between re-renders. useState returns a pair: the current state value and a function that lets you update it. The only argument to the useState() Hook is the initial state. Unlike with classes, the state doesn’t have to be an object. We can keep a number or a string if that’s all we need.
 ```js
 import React, { useState } from 'react';
@@ -38,7 +38,7 @@ function Example() {
 ```
 #
 
-2. Effect Hook
+2. [Effect Hook](https://www.youtube.com/watch?v=0ZJgIjIuY7U&t=624s)
 
 **The Effect Hook lets you perform side effects in function components**
 
