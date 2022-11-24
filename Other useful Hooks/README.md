@@ -54,6 +54,48 @@ function Welcome() {
 ```
 - In the example above, we wrapped the function with useMemo() hook and it returns a memoized value or cached value, which is stored inside the reverseMsg variable. Now we can use reverseMsg in multiple places but the function will only run once and the next time it will return the value immediately from the cache.
 
+#
+
+3. [`useCallback`](https://www.youtube.com/watch?v=_AyFP5s69N4)
+
+- When a component re-renders, every function inside of the component is recreated and therefore these functions’ references change between renders. `useCallback(callback, dependencies)` will return a memoized instance of the callback that only changes if one of the dependencies has changed. This means that instead of recreating the function object on every re-render, we can use the same function object between renders.
+
+```ts
+const memoized = useCallback(() => {
+   // the callback function to be memoized
+ },
+  // dependencies array
+[]);
+```
+> The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
+
+- We need to pass two things to useCallback:
+   - A function definition that you want to cache between re-renders.
+   - A list of dependencies including every value within your component that’s used inside your function.
+
+```ts
+import { useCallback } from 'react';
+
+function ProductPage({ productId, referrer, theme }) {
+  const handleSubmit = useCallback((orderDetails) => {
+    post('/product/' + productId + '/buy', {
+      referrer,
+      orderDetails,
+    });
+  }, [productId, referrer]);
+  // ...
+```
+> On the initial render, the returned function you’ll get from useCallback will be the function you passed.
+On the following renders, React will compare the dependencies with the dependencies you passed during the previous render. If none of the dependencies have changed, useCallback will return the same function as before. In other words, useCallback stores a function between re-renders until its dependencies change.
+
+
+
+
+
+
+
+
+
 
 
 
