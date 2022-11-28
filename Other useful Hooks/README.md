@@ -91,7 +91,7 @@ On the following renders, React will compare the dependencies with the dependenc
 
 [`useContext`](https://www.youtube.com/watch?v=5LrDIWkK_Bc)
 
-- React’s useContext hook makes it easy to pass data throughout your app without manually passing props down the tree.
+- [React’s useContext](https://beta.reactjs.org/apis/react/useContext) hook makes it easy to pass data throughout your app without manually passing props down the tree.
 
 ```js
 import ClassContextComponent from './classContextComponent';
