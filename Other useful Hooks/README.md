@@ -89,6 +89,79 @@ function ProductPage({ productId, referrer, theme }) {
 On the following renders, React will compare the dependencies with the dependencies you passed during the previous render. If none of the dependencies have changed, useCallback will return the same function as before. In other words, useCallback stores a function between re-renders until its dependencies change.
 
 
+[`useContext`](https://www.youtube.com/watch?v=5LrDIWkK_Bc)
+
+- React’s useContext hook makes it easy to pass data throughout your app without manually passing props down the tree.
+
+```js
+import ClassContextComponent from './classContextComponent';
+import React from "react";
+import {Display} from '../displayComponent'
+
+// Here we create a Context
+const NumberContext = React.createContext();
+// It returns an object with 2 values:
+// { Provider, Consumer }
+
+// We can export useContext with destructuring 
+export { CurrencyContext };
+
+
+function App() {
+  // Use the Provider to make a value available to all children and grandchildren
+  return (
+    <NumberContext.Provider value={42}>
+      <div>
+        <Display />
+      </div>
+    </NumberContext.Provider>
+  );
+}
+
+// ----------------- ./DisplayComponent --------------------
+// That's our Display component in separate file which takes tha value from our provider.
+
+export default function Display() {
+  // Then we use .Consumer to grab the value from context in our separate file
+  return (
+    <NumberContext.Consumer>
+      {value => <div>The answer is {value}.</div>}
+    </NumberContext.Consumer>
+  );
+}
+
+
+// ----------------- ./DisplayComponent_PracticalWay --------------------
+//We can also do it this way which is not including .Consumer but it's more practical:
+export default function Display() { 
+    const value = useContext(NumberContext);
+  return (
+      <div>
+          <p>The answer is {value}.</p>
+      </div>
+  );
+}
+```
+
+> All of the components and their childern wraped inside our context provider have access to this variable `value` and it's value. useContext can pass props essentially all the way down into any of the childern, without having to manually pass them. 
+
+- Often, we’ll want the context to change over time. To update context, you need to combine it with state. Declare a state variable in the parent component, and pass the current state down as the context value to the provider:
+
+```js
+function MyPage() {
+  const [theme, setTheme] = useState('dark');
+  return (
+    <ThemeContext.Provider value={theme}>
+      <Form />
+      <Button onClick={() => {
+        setTheme('light');
+      }}>
+        Switch to light theme
+      </Button>
+    </ThemeContext.Provider>
+  );
+}
+```
 
 
 
